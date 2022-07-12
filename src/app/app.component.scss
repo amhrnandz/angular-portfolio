@@ -1,0 +1,34 @@
+@import "global";
+
+.nav-links {
+    @include my-background();
+    display:flex;
+    list-style:none;
+    text-align: right;
+    //position: absolute;
+    //padding: 0.1rem;
+}
+
+.button {
+    //background-color: white;
+    background-color: #06599e;
+    border: none;
+    //color: rgb(255, 132, 0);
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Coolvetica;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    //border-radius:10px;
+  }
+
+.button:hover {
+    background-color:rgb(255, 132, 0);
+    color: white;
+    transition: 0.7s;
+
+}

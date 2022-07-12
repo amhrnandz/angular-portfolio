@@ -1,0 +1,51 @@
+.hero-banner {
+    height: 40vh;
+    width: 100%;
+    min-height: 8rem;
+    max-height: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: Coolvetica;
+    z-index: 0;
+    position: relative;
+
+    margin-bottom: 20px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(2px);
+    }
+
+    &--home {
+        background-image: url("/assets/img/covers/home.jpg");
+        //backdrop-filter: blur(10px);
+    }
+
+    &--about-me {
+        background-image: url("/assets/img/covers/about-me.jpg");
+        //backdrop-filter: blur(10px);
+    }
+
+    &--contact-me {
+        background-image: url("/assets/img/covers/contact-me.jpg");
+        //backdrop-filter: blur(10px);
+    }
+
+    &--text {
+        z-index: 1;
+        letter-spacing: 2px;
+        //backdrop-filter: blur(10px);
+    }
+}

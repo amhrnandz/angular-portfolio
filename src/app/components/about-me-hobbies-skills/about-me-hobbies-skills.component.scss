@@ -1,0 +1,21 @@
+.about-me-hobbies-skills {
+    background-color: rgb(237, 105, 17);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    border-radius: 10px;
+
+    &__text {
+        justify-content: center;
+        text-align: center;
+        font-family: Coolvetica;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+    }
+}
+
+.itemList {
+    font-family: Helvetica;
+}
