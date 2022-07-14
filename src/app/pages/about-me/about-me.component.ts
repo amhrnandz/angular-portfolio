@@ -1,4 +1,4 @@
-import { Component, importProvidersFrom, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LinkListenerService } from 'src/app/link-listener.service';
 import { Router } from '@angular/router';
 
