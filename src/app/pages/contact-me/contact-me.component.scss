@@ -1,72 +1,38 @@
-.nav-listener-item {
+.contact {
     height: 400px;
     width: 60%;
     //width: 27.5%;
     border-radius: 10px;
-
-    &__contact-me {
-        background-color: #06599e;
-        color: white;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    &__list {
-        display: flex;
-        list-style: none;
-        text-align: center;
-        justify-content: center;
-    }
+    background-color: #06599e;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: center;
+    font-family: Coolvetica;
+    letter-spacing: 1px;
 
     &__button {
-        display: flex;
-        //background-color: rgb(255, 102, 0);
+        display: inline-block;
+        width: 150px;
+        height: 50px;
         background-color: #023a68;
-        //background-color: white;
+        padding: 10px;
         color: white;
-        //color: rgb(255, 111, 0);
-        //margin-right: 2rem;
-        min-height:60px;
-        min-width: 150px;
-        font-family: Coolvetica;
-        font-size: large;
-        justify-content: center;
-        align-items: center;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        border-radius: 10px;
-        border: none;
+        font-size: 2.5vmin;
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 23px;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
     }
 
     &__button:hover {
-        background-color: rgb(255, 102, 0);
-        color: white;
-        transition: 0.7s;
+        background-color: white;
+        color: #023a68;
     }
-}
-
-.nav-header {
-    display:flex;
-    flex-direction: row;
-
-    &__image {
-        width: 250px;
-        height: 250px;
-        object-fit:cover;
-        border-radius:50%;
-        margin-top: 20px;
-        //margin-left: 60px;
-        margin-left: auto;
-        margin-right: auto;
-        border: 15px solid #023a68;
+    
+    &__text {
+        margin-top: -3px;
     }
-}
-
-.container {
-    justify-content: center;
-}
-
-.margin {
-    margin-left: -2rem;
-    margin-right: 2rem;
 }

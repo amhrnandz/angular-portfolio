@@ -13,7 +13,7 @@
     color: white;
     font-weight: bold;
     font-size: 3rem;
-    font-family: Coolvetica;
+    font-family: Bahnschrift;
     z-index: 0;
     position: relative;
 
@@ -29,17 +29,17 @@
     }
 
     &--home {
-        background-image: url("/assets/img/covers/home.jpg");
+        background-image: url("~src/assets/img/covers/home.jpg");
         //backdrop-filter: blur(10px);
     }
 
     &--about-me {
-        background-image: url("/assets/img/covers/about-me.jpg");
+        background-image: url("~src/assets/img/covers/about-me.jpg");
         //backdrop-filter: blur(10px);
     }
 
     &--contact-me {
-        background-image: url("/assets/img/covers/contact-me.jpg");
+        background-image: url("~src/assets/img/covers/contact-me.jpg");
         //backdrop-filter: blur(10px);
     }
 

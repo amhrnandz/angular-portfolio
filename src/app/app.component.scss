@@ -5,20 +5,19 @@
     display:flex;
     list-style:none;
     text-align: right;
-    //position: absolute;
-    //padding: 0.1rem;
+    border-bottom: #ED7D31;
+    border-width: 5px;
 }
 
 .button {
     //background-color: white;
-    background-color: #06599e;
+    background-color: #292222;
     border: none;
-    //color: rgb(255, 132, 0);
-    color: white;
-    padding: 15px 15px;
+    color: #ED7D31;
+    padding: 20px 20px;
     text-align: center;
     text-decoration: none;
-    font-family: Coolvetica;
+    font-family: Bahnschrift;
     display: inline-block;
     font-size: 15px;
     text-transform: uppercase;
@@ -27,8 +26,22 @@
   }
 
 .button:hover {
-    background-color:rgb(255, 132, 0);
+    background-color: rgb(255, 132, 0);
     color: white;
     transition: 0.7s;
 
+}
+
+.button:active .button:focus {
+    background-color: rgb(255, 132, 0);
+    color: white;
+}
+
+.logo {
+    width: 35px;
+    height: 30px;
+    //margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
 }

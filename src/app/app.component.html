@@ -2,6 +2,7 @@
   <header>
     <nav>
       <ul class="nav-links">
+        <img src="assets/img/logo.png" class="logo">
         <li *ngFor="let item of navItemsArray">
           <button (click)="linkClick(item)" class="button">
             {{item["name"]}}
@@ -11,7 +12,7 @@
     </nav>
   </header>
 
-  <app-hero-banner></app-hero-banner>
+  <!--<app-hero-banner></app-hero-banner>-->
   <router-outlet></router-outlet>
 
 </main>
