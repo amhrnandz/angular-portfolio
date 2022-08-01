@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { Item } from './item';
 
 @Component({
   selector: 'app-about-me-hobbies-skills',
@@ -8,20 +8,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AboutMeHobbiesSkillsComponent implements OnInit {
   @Input() selectedList: "hobbies" | "skills";
-  hobbies: string[];
-  skills: string[];
+  hobbies: Item[];
+  skills: Item[];
 
   constructor() {
     this.selectedList = "hobbies";
     this.hobbies = [
-      "Listening to music",
-      "Watching Anime",
-      "Reading Manga"
+      new Item ("Listening to music", "headphone"),
+      new Item ("Watching Anime", "television"),
+      new Item ("Reading Manga", "book")
     ]
     this.skills = [
-      "Programming",
-      "Digital Drawing",
-      "Play ukulele",
+      new Item ("Programming", "computer"),
+      new Item ("Digital Art", "brush")
     ]
   }
 

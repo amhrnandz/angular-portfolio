@@ -1,38 +1,66 @@
-.home-header {
+$colors: (
+    primary: #292222,
+    accent: #ED7D31
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+.homePage {
     font-family: Bahnschrift;
-    color: rgba(255, 255, 255, 0.907);
+    color: white;
     letter-spacing: 1px;
     text-align: center;
-}
+    margin-top: 10vh;
 
-.vertically-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
+    &__content {
 
-.logo {
-    width: 35%;
-    height: 35%;
-    float: left;
-    margin-left: 20vmin;
-    margin-right: 10vmin;
-    margin-top: 8vmin;
-}
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            width: 75%;
+            margin: 50px auto 0 auto;
+        }
+    }
 
-.text {
-    justify-content: center;
-    text-align: left;
-    margin-top: 3vmin;
-    margin-left: 100vmin;
+    &__logo {
+        width: 70vmin;
+        justify-content: center;
+        margin-right: 15px;
+
+        @include desktop {
+            float: left;
+            margin-right: 20px;
+            width: 90vmin;
+        }
+    }
+
+    &__text {
+        width: 70%;
+        text-align: center;
+        margin: 3vmin auto 0 auto;
+
+        @include desktop {
+            float: right;
+            text-align: left;
+            margin: 15vmin auto 0 auto;
+        }
+    }
 }
 
 h1 {
     font-size: 7vmin;
     font-weight: bolder;
-    color: rgb(255, 136, 0);
+    color: color(accent);
 }
 
 h2 {

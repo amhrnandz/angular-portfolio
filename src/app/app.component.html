@@ -1,10 +1,10 @@
 <main>
   <header>
     <nav>
-      <ul class="nav-links">
-        <img src="assets/img/logo.png" class="logo">
+      <ul class="nav">
+        <img src="assets/img/logo.svg" class="nav__img">
         <li *ngFor="let item of navItemsArray">
-          <button (click)="linkClick(item)" class="button">
+          <button (click)="linkClick(item)" class="nav__button">
             {{item["name"]}}
           </button>
         </li>

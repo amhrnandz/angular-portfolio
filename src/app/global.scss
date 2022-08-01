@@ -1,7 +1,15 @@
+$colors: (
+    primary: #292222,
+    accent: #ED7D31
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
 @mixin my-background() {
     background-color: #292222;
     width: 100%vw;
-    height: 100%vh;
 }
 
 @font-face {

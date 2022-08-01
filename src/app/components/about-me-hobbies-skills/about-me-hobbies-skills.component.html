@@ -1,16 +1,21 @@
-<div class="about-me-hobbies-skills">
-    <h1 class="about-me-hobbies-skills__text">{{selectedList}}</h1>
-    <img [src] = "'assets/img/' + selectedList +'.jpg'"/>
+<div class="card">
+    <h2>{{selectedList}}</h2>
 
-    <ul *ngIf = "selectedList === 'hobbies'" class="itemList">
-        <li *ngFor="let hobby of hobbies">
-            {{hobby}}
+    <ul *ngIf = "selectedList === 'hobbies'" class="card__list">
+        <li *ngFor="let hobby of hobbies" class="card__item">
+            <div class="card__circle">
+                <img [src] = "'assets/img/items/' + hobby.img +'.png'" class="card__image"/>
+            </div>
+            <span class="card__text">{{hobby.entry}}</span>
         </li>
     </ul>
 
-    <ul *ngIf = "selectedList === 'skills'">
-        <li *ngFor="let skill of skills" class="itemList">
-            {{skill}}
+    <ul *ngIf = "selectedList === 'skills'" class="card__list">
+        <li *ngFor="let skill of skills" class="card__item">
+            <div class="card__circle">
+                <img [src] = "'assets/img/items/' + skill.img +'.png'" class="card__image"/>
+            </div>
+            <span class="card__text">{{skill.entry}}</span>
         </li>
     </ul>
 </div>

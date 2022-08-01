@@ -1,73 +1,82 @@
-.nav-listener-item {
-    height: 400px;
-    width: 60%;
-    //width: 27.5%;
-    min-width: 400px;
-    border-radius: 10px;
+$colors: (
+    primary: #292222,
+    primary-dark: darken(#292222, 2%),
+    accent: #ED7D31
+);
 
-    &__about-me {
-        background-color: #06599e;
-        color: white;
-        margin-left: auto;
-        margin-right: auto;
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+.aboutPage {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    &__img {
+        width: 65vmin;
+        height: 65vmin;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: 30px auto 15px auto;
+
+        @include desktop {
+            float: left;
+            margin: auto;
+            margin-top: 9vh;
+        }
+    }
+
+    &__card {
+
+        @include desktop {
+            margin-right: auto;
+        }
     }
 
     &__list {
+        list-style-type: none;
         display: flex;
-        list-style: none;
-        text-align: center;
-        justify-content: center;
+        flex-direction: row;
+        margin: 16px auto 0 auto;
+
+        @include desktop {
+            margin: 20vmin 5vmin auto 0;
+        }
     }
 
     &__button {
-        display: flex;
-        //background-color: rgb(255, 102, 0);
-        background-color: #023a68;
-        //background-color: white;
-        color: white;
-        //color: rgb(255, 111, 0);
-        //margin-right: 2rem;
+        background-color: color(primary-dark);
+        color: color(accent);
         min-height:60px;
         min-width: 150px;
-        font-family: Coolvetica;
-        font-size: large;
+
+        font-family: Bahnschrift;
+        font-weight: bolder;
+        font-size: 15px;
         justify-content: center;
-        align-items: center;
         text-transform: uppercase;
         letter-spacing: 1px;
-        border-radius: 10px;
+
+        border-radius: 10px 10px 0 0;
         border: none;
+        margin: auto 7px;
     }
 
     &__button:hover {
-        background-color: rgb(255, 102, 0);
+        background-color: color(accent);
         color: white;
         transition: 0.7s;
     }
-}
-
-.nav-header {
-    display:flex;
-    flex-direction: row;
-
-    &__image {
-        width: 250px;
-        height: 250px;
-        object-fit:cover;
-        border-radius:50%;
-        margin-top: 20px;
-        //margin-left: 60px;
-        margin-left: auto;
-        margin-right: auto;
-        border: 15px solid #023a68;
-    }
-}
-
-.container {
-    justify-content: center;
-}
-
-.margin {
-    margin-left: -2rem;
-    margin-right: 2rem;
 }

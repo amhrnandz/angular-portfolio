@@ -1,21 +1,87 @@
-.about-me-hobbies-skills {
-    background-color: rgb(237, 105, 17);
+$colors: (
+    primary: #292222,
+    primary-light: lighten(#292222, 20%),
+    accent: #ED7D31
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+.card {
+    background-color: color(primary);
     color: white;
+    font-family: Arial;
+    padding: 0 10px;
 
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
+    margin: 0 20px 30px 20px;
     border-radius: 10px;
+    justify-content: center;
+
+    @include desktop {
+        margin: auto;
+    }
 
     &__text {
         justify-content: center;
         text-align: center;
-        font-family: Coolvetica;
         text-transform: capitalize;
         letter-spacing: 2px;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        //flex-direction: row;
+        flex: 1 1 0;
+        width: 0;
+        padding: 0;
+        justify-content: center;
+        margin-left: 180px;
+
+        @include desktop {
+            margin-left: 195px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 5px;
+        margin: 0 auto 15px auto;
+        text-align: center;
+    }
+
+    &__circle {
+        background-color: color(accent);
+        border-radius: 100%;
+        width: 50px;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    &__image {
+        width: inherit;
     }
 }
 
-.itemList {
-    font-family: Helvetica;
+h2 {
+    text-align: center;
+    margin: 10px auto;
+    color: color(accent);
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-family: Bahnschrift;
 }

@@ -1,20 +1,12 @@
-<div class="nav-listener-item nav-listener-item__about-me">
-    <!--{{ navItem['name']}}-->
-    <header class="nav-header">
-        <!--<h1>About Me</h1>-->
-        <img src = 'assets/img/momot.jpg' class="nav-header__image"/>
-    </header>
-    <nav class="nav-listener-item__nav">
-        <ul class="nav-listener-item__list">
+<div class="aboutPage">
+    <img src = 'assets/img/momot.jpg' class="aboutPage__img"/>
+    <nav class="aboutPage__card">
+        <ul class="aboutPage__list">
             <li><button (click) = "changeAboutList('hobbies')"
-                class="nav-listener-item__button margin">Hobbies</button></li>
+                class="aboutPage__button">Hobbies</button></li>
             <li><button (click) = "changeAboutList('skills')"
-                class="nav-listener-item__button">Skills</button></li>
+                class="aboutPage__button">Skills</button></li>
         </ul>
+        <app-about-me-hobbies-skills [selectedList]="selectedAboutList" ></app-about-me-hobbies-skills>
     </nav>
-
-    <!--{{selectedAboutList}}-->
-
-    <app-about-me-hobbies-skills [selectedList]="selectedAboutList" ></app-about-me-hobbies-skills>
-
 </div>
