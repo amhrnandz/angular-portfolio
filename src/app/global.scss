@@ -1,24 +1,16 @@
-$colors: (
-    primary: #292222,
-    accent: #ED7D31
-);
-
-@function color($color-name) {
-    @return map-get($colors, $color-name)
-}
-
-@mixin my-background() {
-    background-color: #292222;
-    width: 100%vw;
-}
-
+// Added font
 @font-face {
     font-family: Bahnschrift;
     src: url("/assets/fonts/Bahnschrift.ttf");
 }
 
+// Global colors
+$portfolio-primary-color: #292222;
+$portfolio-secondary-color: #ED7D31;
+
+// Media breakpoints
 $grid-breakpoints: (
-    def: 0px,
+    def: 320px,
     xs: 480px,
     sm: 576px,
     md: 768px,
