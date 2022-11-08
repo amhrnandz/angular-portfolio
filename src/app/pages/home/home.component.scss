@@ -1,19 +1,5 @@
-$colors: (
-    primary: #292222,
-    accent: #ED7D31
-);
-
-@function color($color-name) {
-    @return map-get($colors, $color-name)
-}
-
-$desktop: 840px;
-
-@mixin desktop {
-    @media (min-width: #{$desktop}) {
-        @content;
-    }
-}
+@import "~src/app/global";
+@import "~bootstrap/scss/bootstrap-grid.scss";
 
 .homePage {
     font-family: Bahnschrift;
@@ -23,48 +9,122 @@ $desktop: 840px;
     margin-top: 10vh;
 
     &__content {
+        display: flex;
+        flex-direction: column;
+        margin: auto auto;
 
-        @include desktop {
+        @include media-breakpoint-only(def) {
+            width: 270px;
+        }
+
+        @include media-breakpoint-only(xs) {
+            width: 390px;
+        }
+
+        @include media-breakpoint-only(sm) {
+            width: 500px;
+        }
+
+        @include media-breakpoint-up(md) {
             display: flex;
             flex-direction: row;
-            width: 75%;
             margin: 50px auto 0 auto;
+            align-items: center;
+            gap: 20px;
+        }
+
+        @include media-breakpoint-only(md) {
+            width: 700px;
+        }
+
+        @include media-breakpoint-only(lg) {
+            width: 900px;
+        }
+
+        @include media-breakpoint-only(xl) {
+            width: 1100px;
+        }
+
+        @include media-breakpoint-only(xxl) {
+            width: 1300px;
         }
     }
 
     &__logo {
-        width: 70vmin;
-        justify-content: center;
-        margin-right: 15px;
+        @include media-breakpoint-between(def, md) {
+            width: 100%;
+            justify-content: center;
+        }
 
-        @include desktop {
-            float: left;
-            margin-right: 20px;
-            width: 90vmin;
+        @include media-breakpoint-only(lg) {
+            width: 450px;
+            height: 450px;
+        }
+
+        @include media-breakpoint-only(xl) {
+            width: 550px;
+            height: 550px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            width: 650px;
+            height: 650px;
         }
     }
 
     &__text {
-        width: 70%;
-        text-align: center;
-        margin: 3vmin auto 0 auto;
+        display: flex;
+        flex-direction: column;
 
-        @include desktop {
-            float: right;
+        @include media-breakpoint-between(def, md) {
+            width: 100%;
+            text-align: center;
+        }
+
+        @include media-breakpoint-up(md) {
             text-align: left;
-            margin: 15vmin auto 0 auto;
+            gap: 15px;
+        }
+
+        h1 {
+            font-family: Bahnschrift;
+            font-weight: bolder;
+            color: $portfolio-secondary-color;
+            margin: 0;
+
+            @include media-breakpoint-only(def) {
+                font-size: 25px;
+            }
+
+            @include media-breakpoint-only(lg) {
+                font-size: 40px;
+            }
+
+            @include media-breakpoint-only(xl) {
+                font-size: 55px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 60px;
+            }
+        }
+
+        h2 {
+            font-family: Calibri;
+            color: white;
+            margin: 0;
+
+            @include media-breakpoint-only(def) {
+                font-size: 16px;
+            }
+
+            @include media-breakpoint-only(lg) {
+                font-size: 30px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                font-size: 40px;
+            }
         }
     }
-}
-
-h1 {
-    font-size: 7vmin;
-    font-weight: bolder;
-    color: color(accent);
-}
-
-h2 {
-    margin-top: -2vmin;
-    font-family: Calibri;
-    font-size: 4.5vmin;
 }
