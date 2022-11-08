@@ -1,15 +1,8 @@
-@import "global";
-
-$desktop: 840px;
-
-@mixin desktop {
-    @media (min-width: #{$desktop}) {
-        @content;
-    }
-}
+@import "~src/app/global";
+@import "~bootstrap/scss/bootstrap-grid.scss";
 
 .nav {
-    @include my-background();
+    background: $portfolio-primary-color;
     display:flex;
     list-style: none;
     text-align: center;
@@ -23,9 +16,9 @@ $desktop: 840px;
     }
 
     &__button {
-        background-color: color(primary);
+        background-color: $portfolio-primary-color;
         border: none;
-        color: color(accent);
+        color: $portfolio-secondary-color;
         padding: 20px 20px;
         text-align: center;
         text-decoration: none;
@@ -36,7 +29,7 @@ $desktop: 840px;
         letter-spacing: 1px;
 
         &:hover {
-            background-color: color(accent);
+            background-color: $portfolio-secondary-color;
             color: white;
             transition: 0.7s;
         }
